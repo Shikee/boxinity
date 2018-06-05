@@ -7,8 +7,9 @@ from django.contrib.auth.models import User
 class BoxSerializer(serializers.ModelSerializer):
     class Meta:
         model = Box
-        fields = ('name', 'detail')
-        
+        fields = ('__all__')
+
+
 class UserSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(
             required=True,

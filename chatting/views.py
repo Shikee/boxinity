@@ -12,7 +12,7 @@ class BoxListCreate(generics.ListCreateAPIView):
     serializer_class = BoxSerializer
 
 
-class UserCreate(generics.CreateAPIView):
+class UserListCreate(generics.ListCreateAPIView):
     """
     Creates the user.
     """

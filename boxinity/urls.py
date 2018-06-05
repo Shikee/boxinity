@@ -24,7 +24,13 @@ from django.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('chatting.urls')),
+    # path('users/', include('users.urls')),
+    path('api/users/', include('rest_auth.urls')),
+
     # path('api/box/', views.BoxListCreate.as_view() ),
-    path('api/users/', views.UserCreate.as_view(), name='account-create'),
+    # path('', views.UserListCreate.as_view()),
+
+    # path('api/users/create', views.UserListView.as_view(), name='account-create'),
+    # path('api/users/login', views.UserLogin.as_view(), name='account-login'),
 
 ]
