@@ -1,59 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset='UTF-8'>
+  <link rel='shortcut icon' href='https://s3.amazonaws.com/sendbird-static/favicon/favicon.ico' type='image/x-icon'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <title>Boxinity</title>
 
-  <link rel="icon" href="https://dxstmhyqfqr1o.cloudfront.net/favicon/favicon.ico?hash=d17264e5094efd195edf">
-  <link rel="shortcut icon" href="https://dxstmhyqfqr1o.cloudfront.net/favicon/favicon.ico?hash=d17264e5094efd195edf">
-  <link href='https://fonts.googleapis.com/css?family=Exo+2:400,900italic,900,800italic,800,700italic,700,600italic,600,500italic,500,400italic,300italic,200italic,200,100italic,100,300'
-    rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,900italic,900,800italic,800,700italic,700,600italic,600,500italic,500,400italic,300italic,200italic,200,100italic,100,300'
-    rel='stylesheet' type='text/css'>
+  <style>
+    body {
+      margin: 0;
+      background: #20242a;
+      font-family: 'Lato';
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  <link rel="stylesheet" href="dist/sample.index.css">
+    .top {
+      width: 1100px;
+      height: 43px;
+      padding: 20px 0;
+      margin: 0 auto;
+      position: relative;
+    }
+    .top > a {
+      display: block;
+      float: left;
+    }
+    .top > span {
+      float: left;
+      color: #868d99;
+      font-size: 13px;
+      position: absolute;
+      bottom: 28px;
+      left: 180px;
+      font-family: 'Open Sans';
+    }
+    .sendbird-logo {
+      border: none;
+      height: 40px;
+    }
 
-  <title>Basic Sample | SendBird</title>
+    .content {
+      width: 1100px;
+      height: 808px;
+      margin: 0 auto;
+    }
+
+    .content-image {
+      display: inline-block;
+      width: 680px;
+      height: 808px;
+    }
+
+    .content-chat {
+      width: 400px;
+      height: 100%;
+      float: right;
+    }
+
+  </style>
+
 </head>
-
 <body>
-  <div class="container">
-    <div class="top">
-      <div class="logo">
-        <img src="https://dxstmhyqfqr1o.cloudfront.net/web-basic/symbol_SendBird_positive.svg" width="72" height="72" class="logo-image">
-      </div>
-      <div class="title">
-        <div class="title-company">
-          SendBird
-        </div>
-        <div class="title-desc">
-          Web Basic Sample
-        </div>
-      </div>
-    </div>
 
-    <div class="login">
-      <div class="desc">
-        Start chatting on SendBird by choosing your display name.
-        <br> This can be changed anytime and will be shown on 1-on-1 and group messaging.
-        <div class="download">
-          <a href="https://github.com/smilefam/SendBird-JavaScript/" target="blank" class="download-sample">Download Sample</a>
-        </div>
-      </div>
-      <div class="form">
-        <input type="text" class="form-input" placeholder="Enter User ID" id="user_id">
-        <input type="text" class="form-input" maxlength="12" placeholder="Enter User Nickname" id="user_nickname">
-        <button type="button" class="button" id="login-button">LOGIN</button>
-      </div>
-    </div>
-
-    <div class="image">
-      <img src="https://dxstmhyqfqr1o.cloudfront.net/web-basic/image-landing-01.svg" width="624">
-    </div>
+<div class="top">
+  <a href="https://sendbird.com" target="_blank">
+    <!--<img class="sendbird-logo" src="https://dxstmhyqfqr1o.cloudfront.net/logo/logo_SendBird_positive.svg" alt="SendBird">-->
+    <img class="sendbird-logo" src="https://dxstmhyqfqr1o.cloudfront.net/liveChat/logo_livechat.svg" alt="SendBird">
+  </a>
+</div>
+<div class="content">
+  <div class="content-image">
+    <img src="standardimage.png" width="680" height="810">
   </div>
-  <script src="./dist/sample.index.js"></script>
+  <div class="content-chat" id="sb_chat"></div>
+</div>
+
 </body>
+
+<script src="SendBird.min.js"></script>
+<script src="build/liveChat.SendBird.js"></script>
+<script>
+  var appId = '9DA1B1F4-0BE6-4DA8-82C5-2E81DAB56F23';
+  var channelUrl = 'sendbird_open_channel_1_5b0336cc55abf6d3464e1d2a263a8e343d3b2b42'; // channel: text_chat_test
+  liveChat.start(appId, channelUrl);
+</script>
 
 </html>

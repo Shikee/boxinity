@@ -30,3 +30,17 @@
   -ms-animation-delay:      $delay;
   animation-delay:          $delay;
 }
+
+// Spinner
+@include keyframes(sb-loader) {
+  0%, 80%, 100% {
+    @include transform-scale(0)
+  }
+  40% {
+    @include transform-scale(1.0)
+  }
+}
+
+@mixin sb-ani-spinner() {
+  @include animation(sb-loader 1.4s infinite ease-in-out both);
+}

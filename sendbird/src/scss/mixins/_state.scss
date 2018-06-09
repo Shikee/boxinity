@@ -27,12 +27,6 @@
   &:focus { @content; }
 }
 
-@mixin hover-focus-active {
-  &:hover,
-  &:focus,
-  &:active { @content; }
-}
-
 @mixin after {
   &::after {
     @content
@@ -41,18 +35,6 @@
 
 @mixin before {
   &::before {
-    @content
-  }
-}
-
-@mixin before-after {
-  &::after, &::before {
-    @content
-  }
-}
-
-@mixin plain-before-after {
-  &, &::after, &::before {
     @content
   }
 }
