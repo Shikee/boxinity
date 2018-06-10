@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+    font: 13px Helvetica, Arial;
+    width: 100%;
+    margin: auto;
+}
+@media only screen and (min-device-width: 0px) and (max-device-width: 656px) {
+    .bigscreen {
+        display: none;
+    }
+    nav .nav-wrapper {
+        height: 25%;
+        !important
+    }
+}
+@media only screen and (min-device-width: 656px) {
+    .smallscreen {
+        display: none;
+    }
+}
+#messageOuter {
+  display:flex;
+  height:calc(100vh - 190px);
+  width:100%;
+  background-color: #fff;
+}
+#messages {
+    overflow-y: scroll;
+    width: calc(100vw -   30px);
+    margin-top: 0px;
+}
+#messages li {
+  font-size: 16px;
+}
+#messages li:nth-child(odd) {
+    /*text-align:right;*/
+}
+
+#messages img {
+  border-radius:5px;
+}
+
+.msg_header {
+
+}
+
+.msg_flair {
+  margin-left: 5px;
+  margin-right: 10px;
+  padding-left: 9px;
+  padding-right: 9px;
+  border-radius:2px;
+  color: #fff;
+  display:inline;
+}
+
+.msg_notice {
+  margin-left: 5px;
+  margin-right: 10px;
+  padding-left: 9px;
+  padding-right: 9px;
+  border-radius:2px;
+  color: #b3b3b3;
+  display:inline;
+}
+
+.msg_date {
+  display:inline;
+}
+
+.msg_name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.msg_text {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+img.emoji {
+    margin: 0px !important;
+    display: inline !important;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.dashelement {
+    padding: 20px;
+    margin: 20px;
+}
+.halfsec {
+    width: calc(50% - 40px);
+    height: 400px;
+    padding: 10px
+}
+.syslog {
+    margin-top: 20px;
+    height: 290px;
+}
+.material-icons {
+    vertical-align: middle
+}
+/* Absolute Center Spinner */
+
+.loading {
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+}
+/* Transparent Overlay */
+
+.loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+/* :not(:required) hides these rules from IE9 and below */
+
+.loading:not(:required) {
+    /* hide "loading..." text */
+
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    border: 0;
+}
+.loading:not(:required):after {
+    content: '';
+    display: block;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    -webkit-animation: spinner 1500ms infinite linear;
+    -moz-animation: spinner 1500ms infinite linear;
+    -ms-animation: spinner 1500ms infinite linear;
+    -o-animation: spinner 1500ms infinite linear;
+    animation: spinner 1500ms infinite linear;
+    border-radius: 0.5em;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+    box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+}
+/* Animation */
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-moz-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-o-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+  height:100vh;
+}
+
+.upper {
+  height:50px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  height:50px;
+}
+
+.uppermid {
+  padding-top:25px;
+  height: 75px;
+}
+
+.mid {
+  height:calc(100% - 125px)
+}
+
+.tightlist {
+  margin-right: 15px !important;
+}
+
+.tightlist a {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.statustext {
+  padding-left: 25px;
+  padding-top:10px;
+}
+
+.statusbar_Room {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.statusbar_Row {
+  font-size:14px;
+  color: #a6a6a6;
+}
