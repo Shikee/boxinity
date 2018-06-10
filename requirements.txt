@@ -2,3 +2,4 @@ django==2.0
 django-rest-framework
 django-rest-auth
 django-allauth
+django-cors-headers
