@@ -223,9 +223,9 @@ setInterval(function() {
     updateRoomInf();
     favicon.badge(messagesSinceFocus);
     if (messagesSinceFocus > 0) {
-        document.title = 'Quik (Unread)';
+        document.title = 'Boxinity (Unread)';
     } else {
-        document.title = 'Quik';
+        document.title = 'Boxinity';
     }
 }, 1000);
 
